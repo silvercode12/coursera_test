@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+    <title>Testing Responsive Media Query with Grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+      h1 {
+        text-align: center;
+        color: blue;
+        margin: 2%;
+      }
+      article {
+        color: #e1d5d2;
+      }
+
+      h2 {
+        text-align: center;
+      }
+      .paragraph-division {
+        border: #e1d5d2 solid 1px;
+        padding: 10px;
+      }
+
+      p {
+        text-align: justify;
+        text-indent: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+        height: 150px;
+      }
+
+      p.sandstone {
+        margin-bottom: 0px;
+      }
+      p.sandstone:last-child {
+        margin-bottom: 0px;
+      }
+
+      .bound-box {
+        background-color: #550595;
+        border: 10px solid skyblue;
+
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 2%;
+      }
+
+      .outline-box {
+        display: flex;
+        gap: 10px;
+        margin: 10px;
+      }
+
+      /*** smallest devices****/
+      @media (max-width: 949px) {
+        div.outline-box {
+          flex-flow: column wrap;
+          justify-content: center;
+        }
+        .col-sd-1 {
+          flex-basis: 8.33%;
+        }
+        .col-sd-2 {
+          flex-basis: 16.67%;
+        }
+        .col-sd-3 {
+          flex-basis: 25%;
+        }
+        .col-sd-4 {
+          flex-basis: 33.33%;
+        }
+        .col-sd-5 {
+          flex-basis: 41.67%;
+        }
+        .col-sd-6 {
+          flex-basis: 50%;
+        }
+        .col-sd-7 {
+          flex-basis: 58.14%;
+        }
+        .col-sd-8 {
+          flex-basis: 66.67%;
+        }
+        .col-sd-9 {
+          flex-basis: 75.19%;
+        }
+        .col-sd-10 {
+          flex-basis: 83.33%;
+        }
+        .col-sd-11 {
+          flex-basis: 91.67%;
+        }
+        .col-sd-12 {
+          flex-basis: 100%;
+        }
+      }
+
+      /**********/
+
+      /*** medium devices ***/
+      @media (min-width: 950px) and (max-width: 1199px) {
+        div.outline-box {
+          flex-flow: row wrap;
+          justify-content: space-around;
+        }
+        .col-md-1 {
+          flex-basis: 8.33%;
+        }
+        .col-md-2 {
+          flex-basis: 16.67%;
+        }
+        .col-md-3 {
+          flex-basis: 25%;
+        }
+        .col-md-4 {
+          flex-basis: 33.33%;
+        }
+        .col-md-5 {
+          flex-basis: 41.67%;
+        }
+        .col-md-6 {
+          flex-basis: 50%;
+        }
+        .col-md-7 {
+          flex-basis: 58.14%;
+        }
+        .col-md-8 {
+          flex-basis: 66.67%;
+        }
+        .col-md-9 {
+          flex-basis: 75.19%;
+        }
+        .col-md-10 {
+          flex-basis: 83.33%;
+        }
+        .col-md-11 {
+          flex-basis: 91.67%;
+        }
+        .col-md-12 {
+          flex-basis: 100%;
+        }
+      }
+      /***/
+
+      /*** large devices only ***/
+      @media (min-width: 1200px) {
+        div.outline-box {
+          flex-flow: row wrap;
+          justify-content: space-around;
+        }
+        .col-ld-1 {
+          flex-basis: 8.33%;
+        }
+        .col-ld-2 {
+          flex-basis: 16.67%;
+        }
+        .col-ld-3 {
+          flex-basis: 25%;
+        }
+        .col-ld-4 {
+          flex-basis: 33.33%;
+        }
+        .col-ld-5 {
+          flex-basis: 41.67%;
+        }
+        .col-ld-6 {
+          flex-basis: 50%;
+        }
+        .col-ld-7 {
+          flex-basis: 58.14%;
+        }
+        .col-ld-8 {
+          flex-basis: 66.67%;
+        }
+        .col-ld-9 {
+          flex-basis: 75.19%;
+        }
+        .col-ld-10 {
+          flex-basis: 83.33%;
+        }
+        .col-ld-11 {
+          flex-basis: 91.67%;
+        }
+        .col-ld-12 {
+          flex-basis: 100%;
+        }
+      }
+      /***/
+    </style>
+  </head>
+  <body>
+    <h1>Test infograph &#40;Classes of stone&#41;</h1>
+
+    <section>
+      <div class="bound-box">
+        <div class="outline-box">
+          <div class="col-ld-3 col-md-5 col-sd-12">
+            <article>
+              <h2>Granite</h2>
+              <div class="paragraph-division">
+                <p>Lorem</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-ld-3 col-md-5 col-sd-12">
+            <article>
+              <h2>Slate</h2>
+              <div class="paragraph-division">
+                <p>Donec</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-ld-3 col-md-5 col-sd-10">
+            <article>
+              <h2>Sandstone</h2>
+              <div class="paragraph-division">
+                <p class="sandstone">IDonec mi ipsum, ph</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-ld-3 col-md-5 col-sd-10">
+            <article>
+              <h2>Cobblestone</h2>
+              <div class="paragraph-division">
+                <p>Lorem</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-ld-3 col-md-5 col-sd-10">
+            <article>
+              <h2>Obsidian</h2>
+              <div class="paragraph-division">
+                <p>test</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-ld-3 col-md-5 col-sd-10">
+            <article>
+              <h2>Moss stone</h2>
+              <div class="paragraph-division">
+                <p>test</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-ld-3 col-md-5 col-sd-10">
+            <article>
+              <h2>Andesite</h2>
+              <div class="paragraph-division">
+                <p>test</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-ld-3 col-md-5 col-sd-10">
+            <article>
+              <h2>Netherite</h2>
+              <div class="paragraph-division">
+                <p>test</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

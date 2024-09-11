@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        grid-template-rows: auto; /* Auto height for rows */
+        grid-template-areas:
+          "top-left top-right"
+          "bottom-left bottom-right";
+        gap: 10px; /* Space between boxes */
+        padding: 10px;
+        background-color: #00ffff;
+        margin: 10px;
+      }
+
+      div.top-left {
+        grid-area: top-left;
+        background-color: #a52a2a;
+        padding: 10px;
+      }
+
+      .top-right {
+        grid-area: top-right;
+        background-color: #deb887;
+        padding: 10px;
+      }
+
+      .bottom-left {
+        grid-area: bottom-left;
+        background-color: #90ee90;
+        padding: 10px;
+      }
+
+      .bottom-right {
+        grid-area: bottom-right;
+        background-color: #ffcccb;
+        padding: 10px;
+      }
+      p {
+        grid-column: 1/-1;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Layout</h1>
+
+    <div class="container">
+      <div class="top-left">Top Left</div>
+      <div class="top-right">Top Right</div>
+      <div class="bottom-left">Bottom Left</div>
+      <div class="bottom-right">Bottom Right</div>
+      <article>
+        <p>Random news story</p>
+      </article>
+    </div>
+  </body>
+</html>

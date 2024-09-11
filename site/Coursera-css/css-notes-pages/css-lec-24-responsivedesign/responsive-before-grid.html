@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Layout</title>
+    <style>
+      /********** Base styles **********/
+      * {
+        box-sizing: border-box;
+      }
+
+      h1 {
+        margin-bottom: 15px;
+      }
+
+      p {
+        border: 1px solid black;
+        background-color: #a52a2a;
+        padding: 10px;
+        margin: 5px 0;
+        height: 150px;
+        font-family: Helvetica;
+        color: white;
+      }
+
+      /* Grid Container */
+      .row {
+        display: grid;
+        gap: 15px; /* Adjusts spacing between grid items */
+      }
+
+      /********** Large devices only **********/
+      @media (min-width: 1200px) {
+        .row {
+          grid-template-columns: repeat(
+            4,
+            1fr
+          ); /* 4 equal columns on large devices */
+        }
+        .col-lg-1 {
+          grid-column: span 1;
+        }
+        .col-lg-2 {
+          grid-column: span 2;
+        }
+        .col-lg-3 {
+          grid-column: span 3;
+        }
+        .col-lg-4 {
+          grid-column: span 4;
+        }
+        .col-lg-6 {
+          grid-column: span 6;
+        }
+        .col-lg-12 {
+          grid-column: span 12;
+        }
+      }
+
+      /********** Medium devices only **********/
+      @media (min-width: 950px) and (max-width: 1199px) {
+        .row {
+          grid-template-columns: repeat(
+            2,
+            1fr
+          ); /* 2 equal columns on medium devices */
+        }
+        .col-sd-1 {
+          grid-column: span 1;
+        }
+        .col-sd-2 {
+          grid-column: span 2;
+        }
+        .col-sd-3 {
+          grid-column: span 3;
+        }
+        .col-sd-4 {
+          grid-column: span 4;
+        }
+        .col-sd-6 {
+          grid-column: span 6;
+        }
+        .col-sd-12 {
+          grid-column: span 12;
+        }
+      }
+
+      /********** Small devices (default) **********/
+      .row {
+        grid-template-columns: 1fr; /* Single column layout for smaller devices */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Responsive Layout with CSS Grid</h1>
+
+    <div class="row">
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 1</p>
+      </div>
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 2 Wow this is cool</p>
+      </div>
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 3</p>
+      </div>
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 4</p>
+      </div>
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 5 This is cool</p>
+      </div>
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 6</p>
+      </div>
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 7</p>
+      </div>
+      <div class="col-lg-3 col-sd-6">
+        <p>Item 8</p>
+      </div>
+    </div>
+  </body>
+</html>
