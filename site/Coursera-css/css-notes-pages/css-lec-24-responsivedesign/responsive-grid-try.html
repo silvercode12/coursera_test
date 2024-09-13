@@ -23,8 +23,10 @@
         text-align: center;
       }
       .paragraph-division {
-        border: #e1d5d2 solid 1px;
-        padding: 10px;
+        border: #221916 solid 1px;
+        padding: 0;
+        margin-left: 0px;
+        margin-right: 0px;
       }
 
       p {
@@ -32,34 +34,27 @@
         text-indent: 0px;
         margin-left: 5px;
         margin-right: 5px;
-        height: 150px;
-      }
-
-      p.sandstone {
-        margin-bottom: 0px;
-      }
-      p.sandstone:last-child {
-        margin-bottom: 0px;
+        height: 100px;
+        margin-bottom: 50px;
       }
 
       .bound-box {
-        background-color: #550595;
-        border: 10px solid skyblue;
-
-        margin-left: 1%;
-        margin-right: 1%;
-        margin-bottom: 2%;
+        background-color: #d07f54;
+        margin: 0px;
+        overflow: hidden;
+        padding: 5px;
       }
 
       .outline-box {
         display: flex;
-        gap: 10px;
-        margin: 10px;
+        gap: 5px;
+        background-color: #379f43;
+        padding: 0px;
       }
 
       /*** smallest devices****/
       @media (max-width: 949px) {
-        div.outline-box {
+        .outline-box {
           flex-flow: column wrap;
           justify-content: center;
         }
@@ -107,7 +102,7 @@
       @media (min-width: 950px) and (max-width: 1199px) {
         div.outline-box {
           flex-flow: row wrap;
-          justify-content: space-around;
+          justify-content: space-between;
         }
         .col-md-1 {
           flex-basis: 8.33%;
@@ -152,7 +147,7 @@
       @media (min-width: 1200px) {
         div.outline-box {
           flex-flow: row wrap;
-          justify-content: space-around;
+          justify-content: space-between;
         }
         .col-ld-1 {
           flex-basis: 8.33%;
@@ -204,7 +199,13 @@
             <article>
               <h2>Granite</h2>
               <div class="paragraph-division">
-                <p>Lorem</p>
+                <p>
+                  This image shows how the green .outline-box still has the 15px
+                  margin from it's parent .bound-box but only applies to the
+                  left and right. I'm guessing this is a flex property but I'm
+                  wondering why it allowed for left and right margins only. This
+                  only happened when I removed the border from .bound-box
+                </p>
               </div>
             </article>
           </div>
@@ -212,7 +213,7 @@
             <article>
               <h2>Slate</h2>
               <div class="paragraph-division">
-                <p>Donec</p>
+                <p>Placeholder</p>
               </div>
             </article>
           </div>
@@ -220,7 +221,7 @@
             <article>
               <h2>Sandstone</h2>
               <div class="paragraph-division">
-                <p class="sandstone">IDonec mi ipsum, ph</p>
+                <p class="sandstone">Placeholder</p>
               </div>
             </article>
           </div>
@@ -228,7 +229,7 @@
             <article>
               <h2>Cobblestone</h2>
               <div class="paragraph-division">
-                <p>Lorem</p>
+                <p>Placeholder</p>
               </div>
             </article>
           </div>
@@ -236,7 +237,7 @@
             <article>
               <h2>Obsidian</h2>
               <div class="paragraph-division">
-                <p>test</p>
+                <p>Placeholder</p>
               </div>
             </article>
           </div>

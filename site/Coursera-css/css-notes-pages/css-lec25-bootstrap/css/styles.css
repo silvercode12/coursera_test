@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+.container-fluid{
+    margin: 0px;
+    padding: 50px;
+    background-color: antiquewhite;
+}
+
+.row {
+    margin-bottom: 15px;
+    gap:0px;
+
+}
+.row > div {
+    border: 2px solid red;
+    background-color: gray;
+}
