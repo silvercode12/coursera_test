@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlay Example</title>
+    <style>
+      * {
+        margin: 0px;
+      }
+      .container {
+        width: 20vw; /* 50% of viewport width */
+        background-color: red; /* Red background */
+        height: 200px;
+        position: relative; /* Allows positioning of nested elements */
+      }
+
+      .small-container {
+        width: 10vw; /* 50% of viewport width */
+        background-color: blue; /* Blue background */
+        height: 200px;
+        position: absolute; /* Positioned relative to .container */
+        top: 0;
+        left: 0; /* Positioned to cover from the top-left corner */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="small-container">This is 50% of the viewport width</div>
+    </div>
+  </body>
+</html>

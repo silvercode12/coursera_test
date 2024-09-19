@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Columns Test</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .cont {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .col-sm-6 {
+        background-color: lightblue;
+        padding: 20px;
+        flex-basis: 50%;
+        text-align: center;
+      }
+
+      .col-sm-12 {
+        background-color: lightcoral;
+        padding: 20px;
+        flex-basis: 100%;
+        text-align: center;
+      }
+      
+      .cont > div {
+        position: relative;
+      }
+
+      h2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      
+      p {
+        width: 300px;
+        height: 300px;
+      }
+
+      /* Media Query for Small Devices */
+      @media (max-width: 767px) {
+        .cont {
+          flex-flow: row wrap;
+        }
+        .col-sm-6 {
+          flex-basis:  1%;
+        }
+        .col-sm-12 {
+          flex-basis: 0.33%;
+        }
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="col-sm-6"><h2>Test</h2></h2><p>First Column</p></div>
+      <div class="col-sm-6">Second Column</div>
+      <div class="col-sm-12">Full-Width Column</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Fonts */
+.link-font {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: large;
+}
+.heading-font, .body-font {
+    font-family: "Comic Sans MS", sans-serif;
+}
+/*--------*/
+
+body {
+    background-color: rgb(233, 162, 133);
+    border: 3px solid aliceblue;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url("./img-css/mexican-chicken-and-rice-5-1200.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: row wrap;
+    padding: 1vw;
+    gap: 20px;
+    justify-content: space-between;
+    align-items:center; 
+}
+
+.head-background {
+    border-bottom: 3px solid aliceblue;
+}
+
+.logo {
+    background-color: rgb(222, 163, 76,0.80);
+    padding: 5px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.nav {
+    
+
+    flex-grow: 1;
+}
+
+.nav-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color:azure;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right:10px;
+    border: 2px solid aliceblue;
+    background-color: rgb(233, 162, 133, .80);
+}
+
+a:hover {
+    background-color: rgb(190, 125, 100, .80);
+}
+
+
+.body-background {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5vw;
+    margin-top: 3vw;
+    color: aliceblue;
+}
+
+article{
+    background-color: rgb(85, 68, 64);
+    border: 3px solid rgb(246, 215, 209);
+    position: relative;
+    height: 150px;
+    
+}
+
+.article-background {
+    color: rgb(246, 215, 209);
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: brown;
+    border: 3px solid rgb(246, 215, 209);
+    border-top: none;
+    border-right: none;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+p {
+    position: absolute;
+    top: 35%;
+}
+
+.cont{
+    display: flex;
+    margin: 0px;
+}
+
+/* Small */
+@media (max-width: 767px) and (min-width: 576px) {
+    .cont {
+        flex-flow: column;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    .col-sm-1 {flex-basis: 8.33%;}
+    .col-sm-2 {flex-basis: 16.67%;}
+    .col-sm-3 {flex-basis: 25%;}
+    .col-sm-4 {flex-basis: 33.33%;}
+    .col-sm-5 {flex-basis: 41.67%;}
+    .col-sm-6 {flex-basis: 50%;}
+    .col-sm-7 {flex-basis: 58.33%;}
+    .col-sm-8 {flex-basis: 66.67%;}
+    .col-sm-9 {flex-basis: 75%;}
+    .col-sm-10 {flex-basis: 83.33%;}
+    .col-sm-11 {flex-basis: 91.67%;}
+    .col-sm-12 {flex-basis: 100%;}
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .cont {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        row-gap: 20px;
+    }
+    .col-md-1 {flex-basis: 8.33%;}
+    .col-md-2 {flex-basis: 16.67%;}
+    .col-md-3 {flex-basis: 25%;}
+    .col-md-4 {flex-basis: 33.33%;}
+    .col-md-5 {flex-basis: 41.67%;}
+    .col-md-6 {flex-basis: 50%;}
+    .col-md-7 {flex-basis: 58.33%;}
+    .col-md-8 {flex-basis: 66.67%;}
+    .col-md-9 {flex-basis: 75%;}
+    .col-md-10 {flex-basis: 83.33%;}
+    .col-md-11 {flex-basis: 91.67%;}
+    .col-md-12 {flex-basis: 100%;}
+    .col-md-auto {flex-basis: auto}
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .cont {
+        flex-flow: row;
+        justify-content: space-around;
+        column-gap: 10px;
+    }
+    .col-lg-1 {flex-basis: 8.33%;}
+    .col-lg-2 {flex-basis: 16.67%;}
+    .col-lg-3 {flex-basis: 25%;}
+    .col-lg-4 {flex-basis: 33.33%;}
+    .col-lg-5 {flex-basis: 41.67%;}
+    .col-lg-6 {flex-basis: 50%;}
+    .col-lg-7 {flex-basis: 58.33%;}
+    .col-lg-8 {flex-basis: 66.67%;}
+    .col-lg-9 {flex-basis: 75%;}
+    .col-lg-10 {flex-basis: 83.33%;}
+    .col-lg-11 {flex-basis: 91.67%;}
+    .col-lg-12 {flex-basis: 100%;}
+
+}
+
+
+
+
